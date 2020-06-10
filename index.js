@@ -170,13 +170,25 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(arr, ){
+function filterByWord(arr, flavorName){
 
     /*code here*/
+    const matchFlavorName = [];
+
+    for(let i = 0; i < arr.length; i++){
+        // console.log(arr[i]);
+        // console.log(arr[i].includes(flavorName));
+        if(arr[i].includes(flavorName) ){
+            console.log('inside if');
+            matchFlavorName.push(arr[i]);
+        }
+    }
+
+    return matchFlavorName;
 
 }
 
-console.log(filterByWord(originalFlavors, "chocolate"));
+console.log(filterByWord(originalFlavors, "Chocolate"));
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
